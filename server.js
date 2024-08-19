@@ -1,5 +1,8 @@
 const express = require("express") //import to express
 const app = express()
+const connectDB = require("./config/db")
+
+connectDB()
 
 app.get("/superheroes", (req, res) => {
   res.send({ msg: "Showing all heroes" })
